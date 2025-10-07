@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to <span>Student Management System</span></h1>
+        <a href="{% url 'admin:index' %}" class="admin-btn">Admin Login</a>
+    </header>
+
+    <div class="container">
+        <!-- Side Navigation -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Teachers</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section class="cards">
+                <!-- You can still put cards here later -->
+            </section>
+
+            <section class="description">
+                <p>
+The Student Management System is a web-based platform created to streamline everyday academic operations.
+It centralizes student records, making it easy to update, track, and retrieve information at any time.
+Teachers can manage attendance, upload grades, and monitor student progress with minimal effort.
+Students gain quick access to course schedules, assignments, and academic performance reports.
+Administrators benefit from automated processes that reduce paperwork and save valuable time.
+The system also supports course management, allowing seamless creation and modification of subjects.
+Detailed analytics and reporting tools provide insights into student performance and institutional growth.
+Role-based access ensures that each user interacts only with the features relevant to them.
+The interface is designed for simplicity, ensuring even non-technical users can navigate with ease.
+By integrating all stakeholders into one system, it fosters transparency, efficiency, and collaboration.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
