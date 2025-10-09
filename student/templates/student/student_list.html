@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>Student Page</title>
+    <body>
+        <h1>Students List</h1>
+        <div>
+            <nav>
+                <ul>
+                    <a href='{% url 'student_create'%}'> Add Student</a>
+                </ul>
+            </nav>
+        </div>
+        <table border=1 cellspacing="0">
+            <tr>
+                <th> name </th>
+                <th> age </th>
+                <th> email </th>
+                <th> phone </th>
+                <th> city </th>
+
+                {% for std in students%}
+                <tr>
+                <td>{{ std.name}}</td>
+                <td>{{ std.age}}</td>
+                <td>{{ std.email}}</td>
+                <td>{{ std.phone}}</td>
+                <td>{{ std.city}}</td>
+                </tr>
+                {% endfor%}
+        </table>
+    </body>
+</html>
