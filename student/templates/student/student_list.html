@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    </head>
     <title>Student Page</title>
     <body>
         <h1>Students List</h1>
         <div>
             <nav>
                 <ul>
-                    <a href='{% url 'student_create'%}'> Add Student</a>
+                    <a href = "{% url 'add_student' %}">Add New Student</a>
                 </ul>
             </nav>
         </div>
-        <table border=1 cellspacing="0">
-            <tr>
-                <th> name </th>
-                <th> age </th>
-                <th> email </th>
-                <th> phone </th>
-                <th> city </th>
-
-                {% for std in students%}
+        <div>
+            <table border=1 cellspacing="0">
                 <tr>
-                <td>{{ std.name}}</td>
-                <td>{{ std.age}}</td>
-                <td>{{ std.email}}</td>
-                <td>{{ std.phone}}</td>
-                <td>{{ std.city}}</td>
-                </tr>
-                {% endfor%}
-        </table>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> age </th>
+                    <th> email </th>
+                    <th> phone </th>
+                    <th> city </th>
+                    <th> Option </th>
+
+                    {% for std in students%}
+                    <tr>
+                    <td>{{ std.id}}</td>
+                    <td>{{ std.name}}</td>
+                    <td>{{ std.age}}</td>
+                    <td>{{ std.email}}</td>
+                    <td>{{ std.phone}}</td>
+                    <td>{{ std.city}}</td>
+                    <td><a href = "{% url 'edit_student' std.id %}">Edit</a> | <a href="{% url 'delete_student' std.id %}">Delete</a></td>
+                    </tr>
+                    {% endfor%}
+            </table>
+        </div>
+        
     </body>
 </html>

@@ -2,6 +2,8 @@ from django.urls import path
 from student import views
 
 urlpatterns = [
-    path('student_list/', views.student_list, name='student_list'),
-    path('student_add/', views.student_create, name='student_create'),
+    path('add_student/', views.student_creation_view, name='add_student'),
+    path('student_list/', views.student_list_view, name='student_list'),
+    path('edit_student/<int:id>', views.student_edit_view, name='edit_student'),
+    path('delete_student/<int:id>', views.student_delete_view, name='delete_student'),
 ]
