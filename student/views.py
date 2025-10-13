@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import Student
+from .models import Student, Courses, Teacher
 from django.http import HttpResponse
 from .forms import StudentForm
+from rest_framework import viewsets
+from .serializers import CoursesSerializer, TeacherSerializer, StudentSerializer
 
 # Create your views here.
 def student_creation_view(request):
@@ -39,4 +41,14 @@ def student_delete_view(request, id):
     student.delete()
     return redirect('student_list')
 
+class StudentView(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
 
+class CoursesView(viewsets.ModelViewSet):
+    queryset = Courses.objects.all()
+    serializer_class = CoursesSerializer
+
+class TeacherView(viewsets.ModelViewSet):
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializer

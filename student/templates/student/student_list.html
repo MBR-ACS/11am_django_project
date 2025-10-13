@@ -17,14 +17,14 @@
                 <tr>
                     <th> ID </th>
                     <th> Name </th>
-                    <th> age </th>
-                    <th> email </th>
-                    <th> phone </th>
-                    <th> city </th>
+                    <th> Age </th>
+                    <th> Email </th>
+                    <th> Phone </th>
+                    <th> City </th>
                     <th> Option </th>
-
-                    {% for std in students%}
-                    <tr>
+                </tr> 
+                {% for std in students %}
+                <tr>
                     <td>{{ std.id}}</td>
                     <td>{{ std.name}}</td>
                     <td>{{ std.age}}</td>
@@ -32,10 +32,9 @@
                     <td>{{ std.phone}}</td>
                     <td>{{ std.city}}</td>
                     <td><a href = "{% url 'edit_student' std.id %}">Edit</a> | <a href="{% url 'delete_student' std.id %}">Delete</a></td>
-                    </tr>
-                    {% endfor%}
+                </tr>
+                {% endfor%}
             </table>
         </div>
-        
     </body>
 </html>
