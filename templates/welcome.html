@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management System</title>
@@ -9,18 +9,25 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to <span>Student Management System</span></h1>
-        <a href="{% url 'admin:index' %}" class="admin-btn">Admin Login</a>
+        <div>
+            <h1>Welcome to <span>Student Management System</span></h1>
+            <div>
+                <form method="post" action="{% url 'log-out' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
+        </div>
     </header>
 
     <div class="container">
         <!-- Side Navigation -->
         <nav class="sidebar">
             <ul>
+                <li><a href="{% url 'admin:index'%}">Admin</a></li>
                 <li><a href="{% url 'student_list'%}">Students</a></li>
-                <li><a href="{% url 'course'%}">Courses</a></li>
-                <li><a href="{% url 'teacher'%}">Teachers</a></li>
-                <li><a href="#">Reports</a></li>
+                <li><a href="{% url 'course-list'%}">Courses</a></li>
+                <li><a href="{% url 'teacher-list'%}">Teachers</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>

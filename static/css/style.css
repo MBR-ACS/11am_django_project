@@ -7,23 +7,32 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f6fa;
+    background: #d5e0aa;
     color: #333;
     line-height: 1.6;
 }
 
 /* ====== Header ====== */
 header {
-    background: linear-gradient(135deg, #afeccb, #4364f7, #6fb1fc);
-    color: #fff;
+    background: linear-gradient(135deg, #3b805b, #01a501, #015313);
+    color: #92ff92;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+header > div {
+    display: flex;
+    justify-content: space-between; /* left: heading | right: buttons */
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 300px;
+}
+
 header h1 {
     font-size: 2rem;
     font-weight: 600;
+    margin: 0;
 }
 
 header h1 span {
@@ -39,8 +48,8 @@ header h1 span {
 
 /* ====== Sidebar Navigation ====== */
 .sidebar {
-    width: 120px;
-    background: linear-gradient(135deg, #eccaaf, #4364f7, #6fb1fc);
+    width: 110px;
+    background: linear-gradient(295deg, #6a6223, #252410, #91dd0e);
     padding-top: 30px;
     flex-shrink: 0;
     position: sticky;
@@ -58,7 +67,7 @@ header h1 span {
 
 .sidebar a {
     text-decoration: none;
-    color: #ddd;
+    color: #a4ff92;
     padding: 12px 20px;
     display: block;
     border-radius: 6px;

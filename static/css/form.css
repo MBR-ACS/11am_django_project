@@ -1,0 +1,59 @@
+/* Generic Form Styles */
+.details-form {
+    margin-top: 0px;
+    background: rgb(84, 235, 84);
+}
+
+.details-form label {
+    line-height: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display:inline;
+    font-weight: bold;
+}
+
+
+body > div {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;      /* centers vertically if height is defined */
+    flex-direction: column;   /* stacks heading and form vertically */
+    min-height: 0vh;        /* makes sure it fills the screen */
+    padding: 0;               /* remove unwanted offset */
+}
+
+
+
+.details-form input,
+.details-form select,
+.details-form textarea {
+    width: 150%;
+    height: 35px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+
+.details-form .submit-btn {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    background-color: #006917;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.details-form .submit-btn:hover {
+    background-color: #0056b3;
+}
